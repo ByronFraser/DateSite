@@ -1,0 +1,11 @@
+.correct {
+    border: 2px solid green;
+}
+
+.wrong {
+    border: 2px solid red;
+}
+body {
+    padding-top: 8px;
+    background-image: url(corgi.jpg);
+}
