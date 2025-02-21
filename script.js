@@ -80,3 +80,6 @@ function noAnswer(){
     }
     
 }
+function yesAnswer(){
+    
+}
