@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    img{
+        width: 200px;
+    }
+    .buttons{
+        display: flex;
+        gap: 4px;
+    }
+    .noButton {
+        background-color: #fbc2c2;
+        border-radius: 100px;
+        box-shadow: rgba(187, 44, 44, 0.2) 0 -25px 18px -14px inset,
+                    rgba(187, 44, 44, 0.15) 0 1px 2px,
+                    rgba(187, 44, 44, 0.15) 0 2px 4px,
+                    rgba(187, 44, 44, 0.15) 0 4px 8px,
+                    rgba(187, 44, 44, 0.15) 0 8px 16px,
+                    rgba(187, 44, 44, 0.15) 0 16px 32px;
+        color: red;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 16px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .noButton:hover {
+        box-shadow: rgba(187, 44, 44, 0.35) 0 -25px 18px -14px inset,
+                    rgba(187, 44, 44, 0.25) 0 1px 2px,
+                    rgba(187, 44, 44, 0.25) 0 2px 4px,
+                    rgba(187, 44, 44, 0.25) 0 4px 8px,
+                    rgba(187, 44, 44, 0.25) 0 8px 16px,
+                    rgba(187, 44, 44, 0.25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
+    }
+         
+    .yesButton{
+        background-color: #c2fbd7;
+        border-radius: 100px;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+        color: green;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 16px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .yesButton:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+    }
+            
+    
+</style>
+<body>
+    <div class="main">
+        <img id="corgiGif" src="giphy.webp" alt=""> 
+        <div class="buttons">
+            <button class="yesButton" id="yes">Yes of Course</button>
+            <button class="noButton" id="no" onclick="noAnswer()">No =(</button>   
+        </div>
+        
+        <a href="index.html">Back</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
