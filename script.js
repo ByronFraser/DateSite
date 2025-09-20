@@ -19,19 +19,22 @@ function checkAnswers() {
         const inputElement = document.getElementById(riddle.id);
         const userAnswer = inputElement.value.trim().toLowerCase();
 
-        // Normalize the input by removing "a " or "an " if present
-        const normalizedAnswer = userAnswer.replace(/^(a|an)\s+/i, '');
+        // Reset border each time
+        inputElement.style.border = '1px solid #ccc';
 
-        // Check if the normalized answer is in the list of valid answers
-        if (riddle.answers.map(ans => ans.toLowerCase()).includes(normalizedAnswer)) {
-            inputElement.style.border = '2px solid green'; // Correct answer
-            correctCount++;
-        } else {
-            inputElement.style.border = '2px solid red'; // Incorrect answer
+        if (userAnswer !== '') {
+            // Normalize (remove "a " or "an ")
+            const normalizedAnswer = userAnswer.replace(/^(a|an)\s+/i, '');
+
+            if (riddle.answers.map(ans => ans.toLowerCase()).includes(normalizedAnswer)) {
+                inputElement.style.border = '2px solid green'; 
+                correctCount++;
+            } else {
+                inputElement.style.border = '2px solid red'; 
+            }
         }
     });
 
-    // Display "sample text" if 8 or more answers are correct
     const resultField = document.getElementById('resultField');
     if (correctCount >= 8) {
         resultField.style.display = 'inline';
@@ -39,6 +42,7 @@ function checkAnswers() {
         resultField.style.display = 'none';
     }
 }
+
 let menu = {
     width: 200,
     height: 300,
