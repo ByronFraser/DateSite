@@ -13,7 +13,7 @@ const riddles = [
 ];
 
 function checkAnswers() {
-    let correctCount = 10;
+    let correctCount = 0;
 
     riddles.forEach(riddle => {
         const inputElement = document.getElementById(riddle.id);
@@ -33,7 +33,7 @@ function checkAnswers() {
 
     // Display "sample text" if 8 or more answers are correct
     const resultField = document.getElementById('resultField');
-    if (correctCount >= 0) {
+    if (correctCount >= 10) {
         resultField.style.display = 'inline';
     } else {
         resultField.style.display = 'none';
