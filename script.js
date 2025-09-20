@@ -33,7 +33,7 @@ function checkAnswers() {
 
     // Display "sample text" if 8 or more answers are correct
     const resultField = document.getElementById('resultField');
-    if (correctCount >= 10) {
+    if (correctCount >= 8) {
         resultField.style.display = 'inline';
     } else {
         resultField.style.display = 'none';
