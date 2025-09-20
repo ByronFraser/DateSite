@@ -13,7 +13,7 @@ const riddles = [
 ];
 
 function checkAnswers() {
-    let correctCount = 0;
+    let correctCount = 10;
 
     riddles.forEach(riddle => {
         const inputElement = document.getElementById(riddle.id);
